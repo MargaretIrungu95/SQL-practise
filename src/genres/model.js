@@ -2,6 +2,7 @@
 const {DataTypes} = require("sequelize");
 const connection = require("../db/connection");
 
+// this is a class that will entail genre details and their properties
 const Genre = connection.define("Genre", {
     genre: {
         type: DataTypes.STRING,
@@ -9,5 +10,5 @@ const Genre = connection.define("Genre", {
         allowNull: false
     },
 });
-// export Genre
+// export class Genre
 module.exports = Genre;
