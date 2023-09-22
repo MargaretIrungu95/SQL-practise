@@ -6,6 +6,9 @@ require ("dotenv").config();
 // this is a function that grabs the main express module from within  node_modules
 const express = require ("express");
 
+//import Book
+const Book = require("./books/model");
+
 // to access the port which is in the .env file
 const port = process.env.PORT || 5001;
 
