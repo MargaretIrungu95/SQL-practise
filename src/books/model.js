@@ -5,19 +5,14 @@ const { DataTypes} = require ("sequelize");
 const connection = require ("../database/connection");
 
 // create class Book that creates a table that is called "Book" with title, author and genre and all their properties specified
+//they are then removed as we create seperate tables for authors and genres
 // define is a method on the class Sequelize
 const Book = connection.define("Book", {
     title: {
         type: DataTypes.STRING,
         unique: true,
         allowNull: false,
-    },
-    author: {
-        type: DataTypes.STRING,
-    },
-    genre: {
-        type: DataTypes.STRING,
-    },
+    }
 });
 // export the class Book
 module.exports = Book;

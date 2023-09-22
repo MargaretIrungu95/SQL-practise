@@ -1,6 +1,6 @@
 //similar process as the book model but this one only contains the genre to allow us to create a one to many relationship with Book.
 const {DataTypes} = require("sequelize");
-const connection = require("../db/connection");
+const connection = require("../database/connection");
 
 // this is a class that will entail genre details and their properties
 const Genre = connection.define("Genre", {

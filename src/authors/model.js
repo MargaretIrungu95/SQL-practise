@@ -1,6 +1,6 @@
 //similar to genre and books look at their models for reference
 const { DataTypes } = require("sequelize");
-const connection = require("../db/connection");
+const connection = require("../database/connection");
 
 // this is a class that will entail author details and their properties
 const Author = connection.define("Author", {
