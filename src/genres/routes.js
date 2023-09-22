@@ -1,7 +1,7 @@
 //similar to creating book routes look in books/routes to see notation
 const {Router} = require("express");
 const genreRouter = Router();
-const {addGenre, deleteGenre, getAllGenres, getGenre, getGenreParamGenre} = require("./controllers");
+const {addGenre, deleteGenre, getAllGenres, getGenre} = require("./controllers");
 
 //add genre
 genreRouter.post("/addGenre", addGenre);
@@ -15,8 +15,6 @@ genreRouter.get("/getallGenres", getAllGenres);
 //get one genre and books within said genre
 genreRouter.get("/getGenre", getGenre);
 
-//find all books and authors of genre
-genreRouter.get("/getAllInGenre/:genre", getGenreParams)
 
-
+// export all routes
 module.exports = genreRouter;

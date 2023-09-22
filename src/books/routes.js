@@ -26,5 +26,5 @@ bookRouter.put("/updateBookByTitle", updateBookByTitle);
 
 
 
-//  export the bookRouter function
+//  export the book routers
 module.exports = bookRouter;
