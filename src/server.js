@@ -29,7 +29,7 @@ app.use("/health", (req,res) => {
 
 // creates a listener for the port
 app.listen(port, () => {
-    // syncTables()
+    // syncTables();
     console.log(`Server is listening on port ${port}`);
 });
 

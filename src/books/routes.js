@@ -13,13 +13,13 @@ bookRouter.post("/addBook", addBook)
 bookRouter.get("/listAllBooks", listAllBooks);
 
 // route to send request to find a specific book using its title 
-bookRouter.get("/findBookByTitle", findBookByTitle);
+// bookRouter.get("/findBookByTitle", findBookByTitle);
 
 // route to request to delete a specific book by its title  
 bookRouter.delete("/deleteBookByTitle", deleteBookByTitle);
 
 // route to request to update author by title of book
-bookRouter.put("/updateAuthorByTitle", updateAuthorByTitle);
+// bookRouter.put("/updateAuthorByTitle", updateAuthorByTitle);
 
 // route to send request to update author/genre by title of book
 bookRouter.put("/updateBookByTitle", updateBookByTitle);
