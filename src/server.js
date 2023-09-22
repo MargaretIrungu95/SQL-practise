@@ -9,12 +9,18 @@ const express = require ("express");
 //import Book
 const Book = require("./books/model");
 
+// import the bookRouter function from routes
+const bookRouter = require("./books/routes");
+
 // to access the port which is in the .env file
 const port = process.env.PORT || 5001;
 
 // the app variable allows us to run the express module within node_modules 
 const app = express();
 app.use(express.json()); //allows you to use the content in the express lib.
+
+// http://localhost/books/(allroutenames)
+app.use("/books", bookRouter);
 
 // http://localhost/health
 app.use("/health", (req,res) => {
