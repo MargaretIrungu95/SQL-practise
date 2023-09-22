@@ -1,5 +1,7 @@
-//import Book
+//import Book, genre and author models
 const Book = require("./model");
+const Genre = require("../genres/model");
+const Author = require("../authors/model");
 
 //adding a book to database
 const addBook = async (req, res) => {
