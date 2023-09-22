@@ -4,26 +4,40 @@ const {Router} = require ("express");
 const bookRouter = Router();
 
 // import controllers to give the routes functionality
-const {addBook, listAllBooks, findBookByTitle, deleteBookByTitle, updateAuthorByTitle, updateBookByTitle} = require("./controllers");
+const {
+  addBook,
+  listAllBooks,
+  findBookByTitle,
+  deleteBookByTitle,
+  updateAuthorByTitle,
+  updateBookByTitle,
+  getBooksByAuthor,
+  deleteAllBooks
+} = require("./controllers");
 
-// route to request to add a book to database 
-bookRouter.post("/addBook", addBook)
+// route to request to add a book to database
+bookRouter.post("/addbook", addBook);
 
 // route to request to list all the books in database 
-bookRouter.get("/listAllBooks", listAllBooks);
+bookRouter.get("/listallbooks", listAllBooks);
 
-// route to send request to find a specific book using its title 
-// bookRouter.get("/findBookByTitle", findBookByTitle);
+// route to send request to find a specific book using its title
+bookRouter.get("/findbookbytitle", findBookByTitle);
 
-// route to request to delete a specific book by its title  
-bookRouter.delete("/deleteBookByTitle", deleteBookByTitle);
+// route to request to delete a specific book by its title
+bookRouter.delete("/deletebookbytitle", deleteBookByTitle);
 
 // route to request to update author by title of book
-// bookRouter.put("/updateAuthorByTitle", updateAuthorByTitle);
+bookRouter.put("/updateauthorbytitle", updateAuthorByTitle);
 
 // route to send request to update author/genre by title of book
-bookRouter.put("/updateBookByTitle", updateBookByTitle);
+bookRouter.put("/updatebookbytitle", updateBookByTitle);
 
+// route to send request to get all books from an author
+bookRouter.get("/getbooksbyauthor", getBooksByAuthor);
+
+// route to send request to delete all books
+bookRouter.delete("/deleteallbooks", deleteAllBooks);
 
 
 //  export the book routers
