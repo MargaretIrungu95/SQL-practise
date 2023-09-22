@@ -22,11 +22,14 @@ const genreRouter = require("./genres/routes");
 
 // this establishes the relationships bewtween book and genre and book and author and then syncs the tables accordingly
 const syncTables = () => {
+    //one to many relationship between author and books 
     Author.hasMany(Book);
     Book.belongsTo(Author);
+    //one to many relationship between genre and books 
     Genre.hasMany(Book);
     Book.belongsTo(Genre);
 
+    //sync all three tables 
     Book.sync();
     Author.sync();
     Genre.sync();
