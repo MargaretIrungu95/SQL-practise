@@ -16,6 +16,10 @@ const port = process.env.PORT || 5001;
 const app = express();
 app.use(express.json()); //allows you to use the content in the express lib.
 
+// http://localhost/health
+app.use("/health", (req,res) => {
+    res.status(200).json({message: "API is alive!"});
+});
 
 // creates a listener for the port
 app.listen(port, () => {
